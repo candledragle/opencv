@@ -14,8 +14,10 @@ jobs:
     - name: cmake
       run: mkdir build&&cd build&&cmake ../
     - name: make
-      run: make -j4
+      run: |
+        pwd
+        make -j4
     - name: make check
-      run: make check
+      run: pwd&&make check
     - name: make distcheck
-      run: make distcheck
+      run: pwd&&make distcheck
