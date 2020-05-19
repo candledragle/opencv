@@ -12,12 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: cmake
-      run: mkdir build&&cd build&&cmake ../
+      run: mkdir build&&cd build&&mkdir out&&cmake -D CMAKE_INSTALL_PREFIX=${PWD}/out  ../
     - name: make
       run: |
         cd build
         make -j4
-    - name: make check
-      run: cd build&&make check
-    - name: make distcheck
-      run: cd build&&make distcheck
+    - name: tree
+      run: tree build/out
