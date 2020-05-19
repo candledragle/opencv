@@ -18,4 +18,5 @@ jobs:
         cd build
         make -j4
     - name: tree
-      run: tree build/out
+      run: |
+       sudo apt-get install tree&&tree build/out
