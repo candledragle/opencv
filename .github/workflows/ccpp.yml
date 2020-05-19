@@ -15,9 +15,9 @@ jobs:
       run: mkdir build&&cd build&&cmake ../
     - name: make
       run: |
-        pwd
+        cd build
         make -j4
     - name: make check
-      run: pwd&&make check
+      run: cd build&&make check
     - name: make distcheck
-      run: pwd&&make distcheck
+      run: cd build&&make distcheck
