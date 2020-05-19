@@ -11,8 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
+    - name: cmake
+      run: cmake .
     - name: make
       run: make -j4
     - name: make check
