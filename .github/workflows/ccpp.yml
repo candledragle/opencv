@@ -13,6 +13,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: build for android
       run: |
+        pwd && \
         sudo apt-get install ccache && \
         mkdir build && \
         python platforms/anroid/build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle work_dir=./build
