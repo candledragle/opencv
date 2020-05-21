@@ -11,13 +11,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: cmake
-      run: mkdir build&&cd build&&mkdir out&&cmake -D CMAKE_INSTALL_PREFIX=${PWD}/out  ../
-    - name: make
-      run: |
-        cd build
-        make -j4
-        make install
-    - name: tree
-      run: |
-       sudo apt-get -y install tree&&tree build/out
+    - name: env
+      run: env
