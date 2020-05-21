@@ -11,5 +11,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: env
-      run: env
+    - name: build for android
+      run: python platforms/android/build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle 
