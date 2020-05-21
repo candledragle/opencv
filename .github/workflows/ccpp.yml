@@ -14,5 +14,5 @@ jobs:
     - name: build for android
       run: |
         sudo apt-get install ccache && \
-        make build && \
+        mkdir build && \
         python build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle work_dir=./build
