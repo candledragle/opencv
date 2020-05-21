@@ -15,5 +15,6 @@ jobs:
       run: |
         pwd && \
         sudo apt-get install ccache && \
+        cd platforms/android && \
         mkdir build && \
-        python platforms/anroid/build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle work_dir=./build
+        python build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle work_dir=./build
