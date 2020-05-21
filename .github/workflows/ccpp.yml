@@ -12,4 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build for android
-      run: python platforms/android/build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle 
+      run: |
+        sudo apt-get install ccache
+        python platforms/android/build_sdk.py --sdk_path=${ANDROID_HOME} --ndk_path=${ANDROID_HOME}/ndk-bundle 
